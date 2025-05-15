@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XO Dashboard</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <section class="register">
+      <h2 class="register__title">New account</h2>
+      <p class="register__subtitle">
+        Already have an account? <a href="#">Sign in</a>
+      </p>
+      <form class="register__form">
+        <div class="register__row">
+          <label>
+            First name
+            <input type="text" placeholder="First name" required />
+          </label>
+          <label>
+            Last name
+            <input type="text" placeholder="Last name" required />
+          </label>
+        </div>
+        <label class="register__label">
+          Email address
+          <input type="email" placeholder="Email" required />
+        </label>
+        <label class="register__label register__password">
+          Password
+          <input type="password" placeholder="Password" required />
+        </label>
+        <p class="register__note">
+          min. 8 characters • includes special characters
+        </p>
+        <div class="register__footer">
+          <label class="register__checkbox">
+            <input type="checkbox" required />
+            I agree the <a href="#">Terms of Use</a> and
+            <a href="#">Privacy Policy</a>.
+          </label>
+          <button type="submit" class="register__btn">Create account</button>
+        </div>
+      </form>
+    </section>
+
+    <section
+      class="card card--questionnaire section--hidden"
+      id="questionnaire-card"
+    >
+      <h2 class="card__title">Questionnaire</h2>
+      <!--Adjust the form and the questions-->
+      <form class="form" id="questionnaire-form">
+        <label class="form__label">
+          Age:
+          <input
+            type="number"
+            class="form__input"
+            name="age"
+            min="10"
+            max="100"
+            required
+          />
+        </label>
+        <label class="form__label">
+          Fitness Level:
+          <select class="form__input" name="fitness" required>
+            <option value="">Select</option>
+            <option value="novice">Novice</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="experienced">Experienced</option>
+          </select>
+        </label>
+        <label class="form__label">
+          Your main wellness goal:
+          <select class="form__input" name="goal" required>
+            <option value="">Select a goal</option>
+            <option value="reduce-stress">Reduce Stress</option>
+            <option value="improve-sleep">Improve Sleep</option>
+            <option value="boost-energy">Boost Energy</option>
+            <option value="mental-clarity">Enhance Mental Clarity</option>
+          </select>
+        </label>
+        <button type="submit" class="form__submit-btn">Submit</button>
+      </form>
+    </section>
+
+    <!--mood selection feature-->
+    <div class="mood" id="mood">
+      <div class="mood__content">
+        <p class="mood__title">How are you feeling today?</p>
+        <div class="mood__options">
+          <button class="mood__btn" data-mood="happy">&#128522;</button>
+          <button class="mood__btn" data-mood="neutral">&#128528;</button>
+          <button class="mood__btn" data-mood="sad">&#128577;</button>
+          <button class="mood__btn" data-mood="tired">&#128555;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard dashboard--hidden" id="dashboard">
+      <aside class="dashboard__sidebar">
+        <nav class="dashboard__nav">
+          <!--Add sidebar imgs & alt-->
+          <ul class="dashboard__nav-list">
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="dashboard__main">
+        <header class="header">
+          <div class="header__logo">
+            <!--Add dashboard logo-->
+            <img src="" alt="" />
+            <h1>XO</h1>
+          </div>
+          <div class="header__tools">
+            <!--Add search/notifications/settings icons-->
+            <button class="header__btn">
+              <img src="" alt="" />
+            </button>
+            <button class="header__btn">
+              <img src="" alt="" />
+            </button>
+            <!--check if you need btn/img-->
+            <img class="header__avatar" src="" alt="" />
+          </div>
+        </header>
+        <main class="dashboard__content">
+          <section class="card card--quote">
+            <h2 class="card__title">Daily Quote</h2>
+            <blockquote class="quote" id="quote-text">
+              <!-- Quote here -->
+            </blockquote>
+            <footer class="quote__author" id="quote-author">
+              <!-- Author here -->
+            </footer>
+          </section>
+
+          <!--need to work on this part/ visibility should be hidden??-->
+          <section class="card card--spinwheel">
+            <h2 class="card__title">Spin the Wheel</h2>
+            <p class="card__text">
+              Ready to receive your personalized wellness task?
+            </p>
+            <!--improve btn layout-->
+            <button class="card__btn">Spin Now</button>
+          </section>
+          <section class="card card--tracker">
+            <h2 class="card__title">Habit Tracker</h2>
+            <ul class="tracker">
+              <!--Add habits here-->
+              <li class="tracker__item">Wake up before 8 AM</li>
+              <li class="tracker__item">Drink 2L of water</li>
+              <li class="tracker__item">Meditate 10 minutes</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+    <footer></footer>
+  </body>
+</html>
