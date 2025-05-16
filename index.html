@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Codify"/>
+    <meta name="description" content="Wellness dashboard" />
+    <link rel="favicon-ico" href="./favicon.ico">
     <title>XO Dashboard</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
-    <section
+    <!-- <section
       class="card card--questionnaire section--hidden"
       id="questionnaire-card"
     >
-      <h2 class="card__title">Questionnaire</h2>
+      <h2 class="card__title">Questionnaire</h2> -->
       <!--Adjust the form and the questions-->
-      <form class="form" id="questionnaire-form">
+      <!-- <form class="form" id="questionnaire-form">
         <label class="form__label">
           Age:
           <input
@@ -46,10 +49,10 @@
         </label>
         <button type="submit" class="form__submit-btn">Submit</button>
       </form>
-    </section>
+    </section> -->
 
     <!--mood selection feature-->
-    <div class="mood" id="mood">
+    <!-- <div class="mood" id="mood">
       <div class="mood__content">
         <p class="mood__title">How are you feeling today?</p>
         <div class="mood__options">
@@ -63,9 +66,9 @@
 
     <div class="dashboard dashboard--hidden" id="dashboard">
       <aside class="dashboard__sidebar">
-        <nav class="dashboard__nav">
+        <nav class="dashboard__nav"> -->
           <!--Add sidebar imgs & alt-->
-          <ul class="dashboard__nav-list">
+          <!-- <ul class="dashboard__nav-list">
             <li class="dashboard__nav-item">
               <img src="" alt="" />
             </li>
@@ -77,29 +80,29 @@
             </li>
           </ul>
         </nav>
-      </aside>
+      </aside> -->
       <div class="dashboard__main">
         <header class="header">
           <div class="header__logo">
             <!--Add dashboard logo-->
-            <img src="" alt="" />
-            <h1>XO</h1>
+            <img src="./images/logo.svg" alt="Welllife logo" />
           </div>
           <div class="header__tools">
             <!--Add search/notifications/settings icons-->
             <button class="header__btn">
-              <img src="" alt="" />
+              <img class="header__icon" src="./images/search-icon.svg" alt="Search icon" />
             </button>
             <button class="header__btn">
-              <img src="" alt="" />
+              <img class="header__icon" src="./images/settings-icon.svg" alt="Settings icon" />
             </button>
             <!--check if you need btn/img-->
-            <img class="header__avatar" src="" alt="" />
+            <img class="header__icon" src="./images/profile-icon.svg" alt="Profile icon" />
           </div>
         </header>
         <main class="dashboard__content">
-          <section class="card card--quote">
-            <h2 class="card__title">Daily Quote</h2>
+          <section class="dashboard__user__info">
+            <p class="dashboard__title">Dashboard</p>
+            <h2 class="dashboard__greeting">Hi, Codify</h2>
             <blockquote class="quote" id="quote-text">
               <!-- Quote here -->
             </blockquote>
@@ -107,7 +110,16 @@
               <!-- Author here -->
             </footer>
           </section>
-          <!--need to work on this part/ visibility should be hidden??-->
+          <!-- You might have to restucture the bar graph -->
+          <section class="graph">
+            <div class="graph__mon"></div>
+            <div class="graph__tue"></div>
+            <div class="graph__wed"></div>
+            <div class="graph__thur"></div>
+            <div class="graph__fri"></div>
+            <div class="graph__sat"></div>
+            <div class="graph__sun"></div>
+          </section>
           <section class="card card--spinwheel">
             <h2 class="card__title">Spin the Wheel</h2>
             <p class="card__text">

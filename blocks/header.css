@@ -1,0 +1,29 @@
+.header {
+  box-shadow: 10px 2px 2px gray;
+  border: solid rgba(7, 7, 7, 0.4) 1px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 95vw;
+  max-height: 45px;
+  margin: 0 auto;
+  background-color: #f8f8fc;
+}
+
+.header__logo {
+  padding-left: 10px;
+  margin-top: auto;
+}
+
+.header__btn {
+  padding: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+.header__icon {
+  padding-right: 10px;
+  height: 34px;
+  width: 30px;
+}

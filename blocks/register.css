@@ -8,16 +8,18 @@
 }
 
 #register-overlay {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .register__modal {
+  background-image: linear-gradient(#ffefba, #ffffff);
+  background-repeat: no-repeat;
   position: relative;
   top: 80px;
   padding: 30px;
   border-radius: 8px;
   width: 80vw;
-  background-color: #fff;
+  background-color: #efecfe;
   margin: 0 auto;
 }
 
