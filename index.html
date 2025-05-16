@@ -7,44 +7,6 @@
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
-    <section class="register">
-      <h2 class="register__title">New account</h2>
-      <p class="register__subtitle">
-        Already have an account? <a href="#">Sign in</a>
-      </p>
-      <form class="register__form">
-        <div class="register__row">
-          <label>
-            First name
-            <input type="text" placeholder="First name" required />
-          </label>
-          <label>
-            Last name
-            <input type="text" placeholder="Last name" required />
-          </label>
-        </div>
-        <label class="register__label">
-          Email address
-          <input type="email" placeholder="Email" required />
-        </label>
-        <label class="register__label register__password">
-          Password
-          <input type="password" placeholder="Password" required />
-        </label>
-        <p class="register__note">
-          min. 8 characters • includes special characters
-        </p>
-        <div class="register__footer">
-          <label class="register__checkbox">
-            <input type="checkbox" required />
-            I agree the <a href="#">Terms of Use</a> and
-            <a href="#">Privacy Policy</a>.
-          </label>
-          <button type="submit" class="register__btn">Create account</button>
-        </div>
-      </form>
-    </section>
-
     <section
       class="card card--questionnaire section--hidden"
       id="questionnaire-card"
@@ -116,7 +78,6 @@
           </ul>
         </nav>
       </aside>
-
       <div class="dashboard__main">
         <header class="header">
           <div class="header__logo">
@@ -146,7 +107,6 @@
               <!-- Author here -->
             </footer>
           </section>
-
           <!--need to work on this part/ visibility should be hidden??-->
           <section class="card card--spinwheel">
             <h2 class="card__title">Spin the Wheel</h2>
@@ -170,5 +130,68 @@
     </div>
     <script src="scripts/index.js"></script>
     <footer></footer>
+    <div class="register" id="register-overlay">
+      <div class="register__modal">
+        <h2 class="register__title">New account</h2>
+        <p class="register__subtitle">
+          Already have an account? <a href="#">Sign in</a>
+        </p>
+        <form class="register__form">
+          <div class="register__row">
+            <label class="register__label" for="first-name">
+              First name
+              <input
+                class="register__input"
+                id="first-name"
+                type="text"
+                placeholder="First name"
+                required
+              />
+            </label>
+            <label class="register__label" for="last-name">
+              Last name
+              <input
+                class="register__input"
+                id="last-name"
+                type="text"
+                placeholder="Last name"
+                required
+              />
+            </label>
+          </div>
+          <label class="register__label register__email" for="email">
+            Email address
+            <input
+              class="register__input"
+              id="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label class="register__label register__password" for="password">
+            Password
+            <input
+              class="register__input"
+              id="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <p class="register__note">
+              min. 8 characters • includes special characters
+            </p>
+          </label>
+          <div class="register__footer">
+            <label class="register__checkbox">
+              <input type="checkbox" required />
+              I agree the <a href="#">Terms of Use</a> and
+              <a href="#">Privacy Policy</a>.
+            </label>
+            <button type="submit" class="register__btn">Create account</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

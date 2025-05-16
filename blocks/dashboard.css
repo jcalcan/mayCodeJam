@@ -1,3 +1,6 @@
-.dashboard--hidden {
+#dashboard {
+  background-image: url(../images/dashboard-cover-art.png);
+  background-color: #f8f8f8;
+  background-size: cover;
   display: none;
 }
