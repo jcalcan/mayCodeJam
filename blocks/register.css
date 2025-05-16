@@ -1,0 +1,99 @@
+.register {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(33, 33, 33, 40%);
+}
+
+#register-overlay {
+  visibility: hidden;
+}
+
+.register__modal {
+  background-image: linear-gradient(#ffefba, #ffffff);
+  background-repeat: no-repeat;
+  position: relative;
+  top: 80px;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80vw;
+  background-color: #efecfe;
+  margin: 0 auto;
+}
+
+.register__title {
+  text-align: center;
+
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.register__subtitle {
+  text-align: center;
+  margin: 15px auto;
+  max-width: 300px;
+}
+
+.register__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.register__label {
+  margin: 0 0 15px;
+  max-width: 250px;
+  display: block;
+}
+
+.register__input {
+  margin: 5px 0 0;
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 250px;
+  border-style: none;
+  border-radius: 20px;
+  outline: rgb(109, 108, 108) solid 1px;
+}
+
+.register__input:focus {
+  outline: #d6d0fd solid 2px;
+}
+
+.register__input::placeholder {
+  color: rgb(33, 33, 33, 40%);
+}
+
+.register__note {
+  margin: 5px 0 0;
+  white-space: nowrap;
+  color: rgb(33, 33, 33, 60%);
+}
+
+.register__footer {
+  border-top: solid 1px rgb(33, 33, 33, 30%);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px;
+}
+
+.register__checkbox {
+  white-space: wrap;
+  width: 200px;
+}
+
+.register__btn {
+  padding: 15px;
+  max-width: 300px;
+  background-color: #d6d0fd;
+  color: #202125;
+  border-style: none;
+  border-radius: 8px;
+}
