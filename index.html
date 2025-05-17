@@ -62,14 +62,16 @@
           <button class="mood__btn" data-mood="tired">&#128555;</button>
         </div>
       </div>
-    </div>
+    </div> 
 
-    <div class="dashboard dashboard--hidden" id="dashboard">
-      <aside class="dashboard__sidebar">
-        <nav class="dashboard__nav"> -->
-          <!--Add sidebar imgs & alt-->
-          <!-- <ul class="dashboard__nav-list">
-            <li class="dashboard__nav-item">
+    <div class="dashboard dashboard--hidden" id="dashboard"> 
+       -->
+
+       <!-- <aside class="sidebar">
+        <nav class="sidebar__nav"> 
+          Add sidebar imgs & alt -->
+         <!-- <ul class="sidebar__nav-list">
+            <li class="sidebar__nav-item">
               <img src="" alt="" />
             </li>
             <li class="sidebar__nav-item">
@@ -81,6 +83,8 @@
           </ul>
         </nav>
       </aside> -->
+
+
       <div class="dashboard__main">
         <header class="header">
           <div class="header__logo">
@@ -112,6 +116,10 @@
           </section>
           <!-- You might have to restucture the bar graph -->
           <section class="graph">
+            <div class="graph__header">
+              <h2 class="graph__title">Calories</h2>
+              <div class="graph__filter">Week</div>
+            </div>
             <div class="graph__mon"></div>
             <div class="graph__tue"></div>
             <div class="graph__wed"></div>
@@ -128,19 +136,172 @@
             <!--improve btn layout-->
             <button class="card__btn">Spin Now</button>
           </section>
-          <section class="card card--tracker">
-            <h2 class="card__title">Habit Tracker</h2>
-            <ul class="tracker">
-              <!--Add habits here-->
-              <li class="tracker__item">Wake up before 8 AM</li>
-              <li class="tracker__item">Drink 2L of water</li>
-              <li class="tracker__item">Meditate 10 minutes</li>
+           <!--Testing tracker btn/ ask about aria label-->
+          <section class="tracker">
+            <h2 class="tracker__title">Habit Tracker</h2>
+            <ul class="tracker__list">
+              <li class="tracker__item">
+              
+                <div class="tracker__icon tracker__icon-run">
+                  <img src="/images/running.png" alt="Running icon">
+                </div>
+                <p class="tracker__name">Morning run</p>
+                <input type="checkbox" class="tracker__checkbox"/>
+                
+              </li>
+              <li class="tracker__item">
+                
+                <div class="tracker__icon tracker__icon-water">
+                  <img src="/images/water.png" alt="water icon">
+                </div>
+                <p class="tracker__name">1.5L of water daily</p>
+                <input type="checkbox" class="tracker__checkbox"/>
+                
+              </li>
+              <li class="tracker__item">
+                
+                <div class="tracker__icon tracker__icon-chefhat">
+                  <img src="/images/chefhat.png" alt="chefhat icon">
+                </div>
+                <p class="tracker__name">Cooking mealpreps for 3 days</p>
+                <input type="checkbox" class="tracker__checkbox"/>
+                
+              </li>
             </ul>
+            <button class="tracker__add-btn" id="addHabitBtn">Add Habit</button>
           </section>
+          <div class="habit-modal habit-modal-hidden" id="habitModal">
+            <div class="habit-modal__content">
+              <h3 class="habit-modal__title">Add a New Habit</h3>
+              <form id="habitForm" class="habit-form">
+                <label class="habit-form__label" for="habitName">
+                  Habit: 
+                  <input 
+                  type="text" 
+                  id="habitName"
+                  class="habit-form__input" 
+                  name="habitName" 
+                  placeholder="e.g., Read a new book" 
+                  required 
+                  />
+                </label>
+                         <!--DAYS-->
+                <div class="habit-form__days">
+                  <p class="habit-form__days-title">Select Days</p>
+                  <label class="habit-form__checkbox-label">
+                    <input 
+                    type="checkbox" 
+                    class="habit-form__checkbox"
+                    id="mon"
+                    name="days"
+                    value="Mon"
+                    >
+                    Mon
+                  </label>
+
+                  
+                    
+                    <label class="habit-form__checkbox-label">
+                      <input 
+                      type="checkbox" 
+                      class="habit-form__checkbox"
+                      id="tues"
+                      name="days"
+                      value="Tues"
+                      >
+                      Tues
+                    </label>
+                   
+                      
+                      <label class="habit-form__checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        class="habit-form__checkbox"
+                        id="wed"
+                        name="days"
+                        value="Wed"
+                        >
+                        Wed
+                      </label>
+
+                      
+                       
+                        <label class="habit-form__checkbox-label">
+                          <input 
+                          type="checkbox" 
+                          class="habit-form__checkbox"
+                          id="thurs"
+                          name="days"
+                          value="Thurs"
+                          >
+                          Thurs
+                        </label>
+                        
+                          
+                          <label class="habit-form__checkbox-label">
+                            <input 
+                            type="checkbox" 
+                            class="habit-form__checkbox"
+                            id="fri"
+                            name="days"
+                            value="Fri"
+                            >
+                            Fri
+                          </label>
+                          
+                           
+                            <label class="habit-form__checkbox-label">
+                              <input 
+                              type="checkbox" 
+                              class="habit-form__checkbox"
+                              id="sat"
+                              name="days"
+                              value="Sat"
+                              >
+                              Sat
+                            </label>
+                            
+                              
+                              <label class="habit-form__checkbox-label">
+                                <input 
+                                type="checkbox" 
+                                class="habit-form__checkbox"
+                                id="sun"
+                                name="days"
+                                value="Sun"
+                                >
+                                Sun
+                              </label>
+                </div>
+                <!--TIME inputs uses browser default styles-->
+                <label for="habitTime" class="habit-form__label">
+                  Time: 
+                  <input 
+                  type="time" 
+                  class="habit-form__input"
+                  name="habitTime"
+                  id="habitTime"
+                  >
+        
+                </label>
+
+                
+                <div class="habit-modal__actions">
+                  <button type="submit" class="habit-form__submit" >Save Habit</button>
+                  <button type="button" id="cancelHabitBtn" class="habit-form__cancel">Cancel</button>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+
+
+
         </main>
       </div>
     </div>
-    <script src="scripts/index.js"></script>
+    
     <footer></footer>
     <div class="register" id="register-overlay">
       <div class="register__modal">
