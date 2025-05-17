@@ -95,6 +95,9 @@
 .tracker__icon-meditation {
   background-color: #feecba;
 }
+
+/* Move habits to habits.css */
+
 .habit-modal {
   position: fixed;
   top: 0;
