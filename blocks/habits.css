@@ -1,0 +1,41 @@
+.habits {
+  position: relative;
+  max-width: 517px;
+  max-height: 363px;
+  background-color: #f8f8fc;
+  padding: 20px;
+}
+
+.habits__title {
+  margin: 0;
+}
+
+.habits__tracker {
+  padding: 0;
+  list-style: none;
+}
+
+.habits__tracker__item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid rgba(7, 7, 7, 0.2) 1px;
+  padding: 20px 0 20px;
+}
+
+.habits__tracker__item:first-child {
+  padding-top: 0;
+}
+
+.habits__tracker__item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.habits__clock__icon {
+  position: absolute;
+  bottom: 4;
+  left: 111px;
+}
+
+.habits__timer__icon {
+}
