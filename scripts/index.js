@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+  function showHabitModal() {
+    habitModal.classList.remove("habit-modal-hidden");
+  }
+
+  function hideHabitModal() {
+    habitModal.classList.add("habit-modal-hidden");
+  }
+
+  const addHabitBtn = document.getElementById("addHabitBtn");
+  const habitModal = document.getElementById("habitModal");
+  const cancelHabitBtn = document.getElementById("cancelHabitBtn");
+
+  addHabitBtn.addEventListener("click", showHabitModal);
+  cancelHabitBtn.addEventListener("click", hideHabitModal);
+});
+
 // experimenting the feature
 
 function handleMoodSelection(event) {
