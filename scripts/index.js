@@ -51,3 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", handleMoodSelection);
   });
 });
+
+const spinWheel = document.querySelector(".spinwheel__box");
+spinWheel.addEventListener("click", function () {
+  const spins = Math.floor(Math.random() * 5) + 5;
+  const degres = spins * 360 + Math.floor(Math.random() * 360);
+  spinWheel.style.transform = `rotate(${degres}deg)`;
+});

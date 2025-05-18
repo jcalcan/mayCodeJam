@@ -7,7 +7,7 @@
   margin-right: 0;
   margin-left: auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  overflow: visible;
+  grid-row: 2/3;
 }
 
 .graph__header {
