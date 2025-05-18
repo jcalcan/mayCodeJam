@@ -10,3 +10,24 @@ http://localhost:3000
 `npm run start` — to launch the server
 
 `npm run dev` — to launch the server with the hot reload feature
+
+## Installing MongoDB
+
+for windows - https://www.mongodb.com/try/download/community
+
+for mac
+Run these commands (-->) to install MongoDB using Homebrew:
+
+--> brew tap mongodb/brew
+
+--> brew update
+
+--> brew install mongodb-community@7.0
+
+## command to start the MongoDB background service for Mac
+
+--> brew services start mongodb-community@7.0
+
+Linux
+
+Installation instructions vary depending on your distribution. You can find the recommended packages and instructions here. https://www.mongodb.com/docs/manual/administration/install-on-linux/#recommended

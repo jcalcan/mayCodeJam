@@ -1,20 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const cors = require("cors");
+const cors = require("cors");
 // const { errors } = require("celebrate");
 // const errorHandler = require("./middlewares/error-handler");
 // const { requestLogger, errorLogger } = require("./middlewares/logger");
 
 require("dotenv").config();
 const { login, createUser } = require("./controllers/users");
-// const { corsOptions } = require("./utils/config");
+const { corsOptions } = require("./utils/config");
 const { NOT_FOUND_ERROR_MESSAGE } = require("./utils/errors");
 const { NotFoundError } = require("./utils/errors/NotFoundError");
 
 const { PORT = 3001 } = process.env;
 const app = express();
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,8 +27,10 @@ app.use("/items", require("./routes/habitItems"));
 
 app.use((req, res, next) => next(new NotFoundError(NOT_FOUND_ERROR_MESSAGE)));
 
+app.use(express.static(path.join(__dirname, "../public")));
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/wtwr_db") //CHANGE THE DB
+  .connect("mongodb://127.0.0.1:27017/fitness_app_db")
   .then(() => {
     console.log("Connected to DB");
   })

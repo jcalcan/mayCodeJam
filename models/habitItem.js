@@ -6,26 +6,10 @@ const { ObjectId } = mongoose.Schema.Types;
 const User = require("./user");
 
 const habitItem = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    minLength: 2,
-    maxLength: 30
-  },
   habit: {
     type: String,
     required: true,
     enum: ["run", "workout"]
-  },
-  imageUrl: {
-    type: String,
-    required: true,
-    validate: {
-      validator(v) {
-        return validator.isURL(v);
-      },
-      message: "Please enter a valid URL"
-    }
   },
   owner: {
     type: ObjectId,

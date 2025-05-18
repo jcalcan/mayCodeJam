@@ -34,9 +34,7 @@ const createItem = async (req, res, next) => {
       return next(new UnauthorizedError(AUTHENTICATION_FAIL_MESSAGE));
     }
     const item = await HabitItem.create({
-      name: req.body.name,
       habit: req.body.habit,
-      imageUrl: req.body.imageUrl,
       owner: req.user._id
     });
 
