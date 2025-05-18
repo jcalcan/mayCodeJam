@@ -63,55 +63,54 @@
         </div>
       </div>
     </div>  -->
-
-    <div class="dashboard dashboard--hidden" id="dashboard">
+    <div class="dashboard__main">
       <aside class="sidebar">
         <nav class="sidebar__nav">
-          Add sidebar imgs & alt
           <ul class="sidebar__nav-list">
             <li class="sidebar__nav-item">
-              <img src="" alt="" />
+              <img src="./images/widget-icon.svg" alt="Widget icon" />
             </li>
             <li class="sidebar__nav-item">
-              <img src="" alt="" />
+              <img src="./images/calendar-icon.svg" alt="Calendar icon" />
             </li>
             <li class="sidebar__nav-item">
-              <img src="" alt="" />
+              <img src="./images/book-icon.svg" alt="Book icon" />
             </li>
           </ul>
         </nav>
       </aside>
 
-      <div class="dashboard__main">
-        <header class="header">
-          <div class="header__logo">
-            <!--Add dashboard logo-->
-            <img src="./images/logo.svg" alt="Welllife logo" />
-          </div>
-          <div class="header__tools">
-            <!--Add search/notifications/settings icons-->
-            <button class="header__btn">
-              <img
-                class="header__icon"
-                src="./images/search-icon.svg"
-                alt="Search icon"
-              />
-            </button>
-            <button class="header__btn">
-              <img
-                class="header__icon"
-                src="./images/settings-icon.svg"
-                alt="Settings icon"
-              />
-            </button>
-            <!--check if you need btn/img-->
+      <header class="header">
+        <div class="header__logo">
+          <!--Add dashboard logo-->
+          <img src="./images/logo.svg" alt="Welllife logo" />
+        </div>
+        <div class="header__tools">
+          <!--Add search/notifications/settings icons-->
+          <button class="header__btn">
             <img
               class="header__icon"
-              src="./images/profile-icon.svg"
-              alt="Profile icon"
+              src="./images/search-icon.svg"
+              alt="Search icon"
             />
-          </div>
-        </header>
+          </button>
+          <button class="header__btn">
+            <img
+              class="header__icon"
+              src="./images/settings-icon.svg"
+              alt="Settings icon"
+            />
+          </button>
+          <!--check if you need btn/img-->
+          <img
+            class="header__icon"
+            src="./images/profile-icon.svg"
+            alt="Profile icon"
+          />
+        </div>
+      </header>
+
+      <div class="dashboard" id="dashboard">
         <main class="dashboard__content">
           <section class="dashboard__user__info">
             <p class="dashboard__title">Dashboard</p>
@@ -355,6 +354,7 @@
               required
             />
           </label>
+
           <label class="register__label register__password" for="password">
             Password
             <input
@@ -368,6 +368,7 @@
               min. 8 characters • includes special characters
             </p>
           </label>
+
           <div class="register__footer">
             <label class="register__checkbox">
               <input type="checkbox" required />
