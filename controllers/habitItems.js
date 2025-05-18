@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongoose").Types;
-const HabitItem = require("../models/habitItem");
+const HabitItems = require("../models/habitItem");
 
 const {
   CREATED,
@@ -16,7 +16,7 @@ const { BadRequestError, NotFoundError } = require("../utils/errors/index");
 
 const getItems = async (req, res, next) => {
   try {
-    const habits = await HabitItem.find({});
+    const habits = await HabitItems.find({});
 
     res.status(OK).json({ data: habits });
   } catch (err) {
@@ -25,15 +25,13 @@ const getItems = async (req, res, next) => {
 };
 
 const createItem = async (req, res, next) => {
+  // console.log("createItem Headers:", req.headers);
+  // console.log("createItem Body:", req.body);
   try {
-    if (!URL.canParse(req.body.imageUrl)) {
-      return next(new BadRequestError(INVALID_URL_MESSAGE));
-    }
-
     if (!req.user) {
       return next(new UnauthorizedError(AUTHENTICATION_FAIL_MESSAGE));
     }
-    const item = await HabitItem.create({
+    const item = await HabitItems.create({
       habit: req.body.habit,
       owner: req.user._id
     });
@@ -41,7 +39,7 @@ const createItem = async (req, res, next) => {
     return res.status(CREATED).json(item);
   } catch (err) {
     if (err.name === "ValidationError") {
-      return next(new BadRequestError(INVALID_URL_MESSAGE));
+      return next(new BadRequestError(err.message));
     }
 
     return next(err);

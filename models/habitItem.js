@@ -3,9 +3,9 @@ const validator = require("validator");
 
 const { ObjectId } = mongoose.Schema.Types;
 
-const User = require("./user");
+const User = require("./users");
 
-const habitItem = new mongoose.Schema({
+const habitItems = new mongoose.Schema({
   habit: {
     type: String,
     required: true,
@@ -28,4 +28,4 @@ const habitItem = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("HabitItem", habitItem);
+module.exports = mongoose.model("HabitItems", habitItems, "habitItems");

@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/user");
+const User = require("../models/users");
 const { JWT_SECRET } = require("../utils/config");
 
 const {
@@ -23,7 +23,7 @@ const {
   ConflictError
 } = require("../utils/errors/index");
 
-const { isValidUrl } = require("../utils/validation");
+const { isValidUrl } = require("../middlewares/validation");
 
 const createUser = async (req, res, next) => {
   try {
