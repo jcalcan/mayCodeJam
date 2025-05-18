@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Codify"/>
+    <meta name="author" content="Codify" />
     <meta name="description" content="Wellness dashboard" />
-    <link rel="favicon-ico" href="./favicon.ico">
-    <title>XO Dashboard</title>
+    <link rel="favicon-ico" href="./favicon.ico" />
+    <title>Wellife</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
@@ -15,8 +15,8 @@
       id="questionnaire-card"
     >
       <h2 class="card__title">Questionnaire</h2> -->
-      <!--Adjust the form and the questions-->
-      <!-- <form class="form" id="questionnaire-form">
+    <!--Adjust the form and the questions-->
+    <!-- <form class="form" id="questionnaire-form">
         <label class="form__label">
           Age:
           <input
@@ -62,15 +62,13 @@
           <button class="mood__btn" data-mood="tired">&#128555;</button>
         </div>
       </div>
-    </div> 
+    </div>  -->
 
-    <div class="dashboard dashboard--hidden" id="dashboard"> 
-       -->
-
-       <!-- <aside class="sidebar">
-        <nav class="sidebar__nav"> 
-          Add sidebar imgs & alt -->
-         <!-- <ul class="sidebar__nav-list">
+    <div class="dashboard dashboard--hidden" id="dashboard">
+      <aside class="sidebar">
+        <nav class="sidebar__nav">
+          Add sidebar imgs & alt
+          <ul class="sidebar__nav-list">
             <li class="sidebar__nav-item">
               <img src="" alt="" />
             </li>
@@ -82,8 +80,7 @@
             </li>
           </ul>
         </nav>
-      </aside> -->
-
+      </aside>
 
       <div class="dashboard__main">
         <header class="header">
@@ -94,13 +91,25 @@
           <div class="header__tools">
             <!--Add search/notifications/settings icons-->
             <button class="header__btn">
-              <img class="header__icon" src="./images/search-icon.svg" alt="Search icon" />
+              <img
+                class="header__icon"
+                src="./images/search-icon.svg"
+                alt="Search icon"
+              />
             </button>
             <button class="header__btn">
-              <img class="header__icon" src="./images/settings-icon.svg" alt="Settings icon" />
+              <img
+                class="header__icon"
+                src="./images/settings-icon.svg"
+                alt="Settings icon"
+              />
             </button>
             <!--check if you need btn/img-->
-            <img class="header__icon" src="./images/profile-icon.svg" alt="Profile icon" />
+            <img
+              class="header__icon"
+              src="./images/profile-icon.svg"
+              alt="Profile icon"
+            />
           </div>
         </header>
         <main class="dashboard__content">
@@ -128,44 +137,55 @@
             <div class="graph__sat"></div>
             <div class="graph__sun"></div>
           </section>
-          <section class="card card--spinwheel">
-            <h2 class="card__title">Spin the Wheel</h2>
+          <section class="spinwheel__section">
+            <h2 class="card__title">
+              Feeling overwhelmed? Spin the wheel for your next workout!
+            </h2>
+            <div class="spinwheel__pin"></div>
+            <div id="spinwheel" class="spinwheel__container">
+              <div id="box" class="spinwheel__box">
+                <div class="spinwheel__box1">
+                  <span>Wedge 1</span>
+                  <p class="spinwheel__description">Strength</p>
+                  <span>Wedge 2</span>
+                  <p class="spinwheel__description">Balance</p>
+                  <span>Wedge 3</span>
+                  <p class="spinwheel__description">Endurance</p>
+                  <span>Wedge 4</span>
+                  <p class="spinwheel__description">Flexibility</p>
+                </div>
+              </div>
+            </div>
+
             <p class="card__text">
               Ready to receive your personalized wellness task?
             </p>
             <!--improve btn layout-->
-            <button class="card__btn">Spin Now</button>
           </section>
-           <!--Testing tracker btn/ ask about aria label-->
+          <!--Testing tracker btn/ ask about aria label-->
           <section class="tracker">
             <h2 class="tracker__title">Habit Tracker</h2>
             <ul class="tracker__list">
               <li class="tracker__item">
-              
                 <div class="tracker__icon tracker__icon-run">
-                  <img src="/images/running.png" alt="Running icon">
+                  <img src="/images/running.png" alt="Running icon" />
                 </div>
                 <p class="tracker__name">Morning run</p>
-                <input type="checkbox" class="tracker__checkbox"/>
-                
+                <input type="checkbox" class="tracker__checkbox" />
               </li>
               <li class="tracker__item">
-                
                 <div class="tracker__icon tracker__icon-water">
-                  <img src="/images/water.png" alt="water icon">
+                  <img src="/images/water.png" alt="water icon" />
                 </div>
                 <p class="tracker__name">1.5L of water daily</p>
-                <input type="checkbox" class="tracker__checkbox"/>
-                
+                <input type="checkbox" class="tracker__checkbox" />
               </li>
               <li class="tracker__item">
-                
                 <div class="tracker__icon tracker__icon-meditation">
-                  <img src="/images/meditation.png" alt="meditation icon">
+                  <img src="/images/meditation.png" alt="meditation icon" />
                 </div>
                 <p class="tracker__name">Meditate - 30 minutes</p>
-                <input type="checkbox" class="tracker__checkbox"/>
-                
+                <input type="checkbox" class="tracker__checkbox" />
               </li>
             </ul>
             <button class="tracker__add-btn" id="addHabitBtn">Add Habit</button>
@@ -175,133 +195,126 @@
               <h3 class="habit-modal__title">Add a New Habit</h3>
               <form id="habitForm" class="habit-form">
                 <label class="habit-form__label" for="habitName">
-                  Habit: 
-                  <input 
-                  type="text" 
-                  id="habitName"
-                  class="habit-form__input" 
-                  name="habitName" 
-                  placeholder="e.g., Read a new book" 
-                  required 
+                  Habit:
+                  <input
+                    type="text"
+                    id="habitName"
+                    class="habit-form__input"
+                    name="habitName"
+                    placeholder="e.g., Read a new book"
+                    required
                   />
                 </label>
-                         <!--DAYS-->
+                <!--DAYS-->
                 <div class="habit-form__days">
                   <p class="habit-form__days-title">Select Days</p>
                   <label class="habit-form__checkbox-label">
-                    <input 
-                    type="checkbox" 
-                    class="habit-form__checkbox"
-                    id="mon"
-                    name="days"
-                    value="Mon"
-                    >
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="mon"
+                      name="days"
+                      value="Mon"
+                    />
                     Mon
                   </label>
 
-                  
-                    
-                    <label class="habit-form__checkbox-label">
-                      <input 
-                      type="checkbox" 
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
                       class="habit-form__checkbox"
                       id="tues"
                       name="days"
                       value="Tues"
-                      >
-                      Tues
-                    </label>
-                   
-                      
-                      <label class="habit-form__checkbox-label">
-                        <input 
-                        type="checkbox" 
-                        class="habit-form__checkbox"
-                        id="wed"
-                        name="days"
-                        value="Wed"
-                        >
-                        Wed
-                      </label>
+                    />
+                    Tues
+                  </label>
 
-                      
-                       
-                        <label class="habit-form__checkbox-label">
-                          <input 
-                          type="checkbox" 
-                          class="habit-form__checkbox"
-                          id="thurs"
-                          name="days"
-                          value="Thurs"
-                          >
-                          Thurs
-                        </label>
-                        
-                          
-                          <label class="habit-form__checkbox-label">
-                            <input 
-                            type="checkbox" 
-                            class="habit-form__checkbox"
-                            id="fri"
-                            name="days"
-                            value="Fri"
-                            >
-                            Fri
-                          </label>
-                          
-                           
-                            <label class="habit-form__checkbox-label">
-                              <input 
-                              type="checkbox" 
-                              class="habit-form__checkbox"
-                              id="sat"
-                              name="days"
-                              value="Sat"
-                              >
-                              Sat
-                            </label>
-                            
-                              
-                              <label class="habit-form__checkbox-label">
-                                <input 
-                                type="checkbox" 
-                                class="habit-form__checkbox"
-                                id="sun"
-                                name="days"
-                                value="Sun"
-                                >
-                                Sun
-                              </label>
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="wed"
+                      name="days"
+                      value="Wed"
+                    />
+                    Wed
+                  </label>
+
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="thurs"
+                      name="days"
+                      value="Thurs"
+                    />
+                    Thurs
+                  </label>
+
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="fri"
+                      name="days"
+                      value="Fri"
+                    />
+                    Fri
+                  </label>
+
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="sat"
+                      name="days"
+                      value="Sat"
+                    />
+                    Sat
+                  </label>
+
+                  <label class="habit-form__checkbox-label">
+                    <input
+                      type="checkbox"
+                      class="habit-form__checkbox"
+                      id="sun"
+                      name="days"
+                      value="Sun"
+                    />
+                    Sun
+                  </label>
                 </div>
                 <!--TIME inputs uses browser default styles-->
                 <label for="habitTime" class="habit-form__label">
-                  Time: 
-                  <input 
-                  type="time" 
-                  class="habit-form__input"
-                  name="habitTime"
-                  id="habitTime"
-                  >
-        
+                  Time:
+                  <input
+                    type="time"
+                    class="habit-form__input"
+                    name="habitTime"
+                    id="habitTime"
+                  />
                 </label>
 
-                
                 <div class="habit-modal__actions">
-                  <button type="submit" class="habit-form__submit" >Save Habit</button>
-                  <button type="button" id="cancelHabitBtn" class="habit-form__cancel">Cancel</button>
+                  <button type="submit" class="habit-form__submit">
+                    Save Habit
+                  </button>
+                  <button
+                    type="button"
+                    id="cancelHabitBtn"
+                    class="habit-form__cancel"
+                  >
+                    Cancel
+                  </button>
                 </div>
-
-
               </form>
             </div>
           </div>
-
-
-
         </main>
       </div>
     </div>
-    
+
     <footer></footer>
     <div class="register" id="register-overlay">
       <div class="register__modal">

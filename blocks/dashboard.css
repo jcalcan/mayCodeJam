@@ -1,6 +1,6 @@
 .dashboard__main {
   background-image: url(../images/dashboard-cover-art.png);
-  background-color: #f8f8f8;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: 300px;
   background-color: none;
@@ -8,6 +8,7 @@
 }
 
 .dashboard__content {
+  display: grid;
   padding: 0 40px 0;
 }
 
