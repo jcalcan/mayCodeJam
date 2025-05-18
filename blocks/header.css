@@ -1,12 +1,11 @@
 .header {
   box-shadow: 10px 2px 2px gray;
-  border: solid rgba(7, 7, 7, 0.4) 1px;
+  border: rgba(7, 7, 7, 0.4) 1px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  max-width: 95vw;
-  max-height: 45px;
+  max-width: 90vw;
+  height: 55px;
   margin: 0 auto;
   background-color: #f8f8fc;
 }
@@ -23,7 +22,7 @@
 }
 
 .header__icon {
-  padding-right: 10px;
-  height: 34px;
-  width: 30px;
+  padding: 5px 15px 0 0;
+  height: 44px;
+  width: 40px;
 }
