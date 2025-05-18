@@ -51,10 +51,32 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", handleMoodSelection);
   });
 });
-
+let lastSpinDegrees = 0;
 const spinWheel = document.querySelector(".spinwheel__box");
+const videoModal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".modal__close-btn");
+
+function showVideo(section) {
+  const videoContainer = document.querySelector("#videoContainer");
+  const iframe = videoContainer.querySelector("iframe");
+  const videos = {
+    Strength: "https://www.youtube.com/embed/H1F-UfC8Mb8?si=WabegDvWTvk7nHSY",
+  };
+}
+
 spinWheel.addEventListener("click", function () {
   const spins = Math.floor(Math.random() * 5) + 5;
-  const degres = spins * 360 + Math.floor(Math.random() * 360);
-  spinWheel.style.transform = `rotate(${degres}deg)`;
+  lastSpinDegrees = spins * 360 + Math.floor(Math.random() * 360);
+  spinWheel.style.transform = `rotate(${lastSpinDegrees}deg)`;
+});
+
+spinWheel.addEventListener("transitionend", function () {
+  const section = getSelection(lastSpinDegrees);
+  showVideo(section);
+  videoModal.classList.add("modal-visible");
+});
+
+closeBtn.addEventListener("click", function () {
+  console.log("Close button clicked");
+  videoModal.classList.remove("modal-visible");
 });
