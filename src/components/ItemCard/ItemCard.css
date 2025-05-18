@@ -1,0 +1,42 @@
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  align-items: center;
+}
+
+.itemCard-title {
+  margin: 0;
+  padding: 2px 12px;
+  border-radius: 4px;
+  position: absolute;
+  top: 15px;
+
+  justify-content: center;
+  font-family: CabinetGrotesk, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #00000099;
+  background-color: white;
+}
+
+.itemCard-img {
+  border-radius: 20px;
+  border: solid #0000004d;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  height: 325px;
+  width: 100%;
+  display: block;
+}
+@media screen and (max-width: 375px) {
+  .itemCard-img {
+    height: 161px;
+  }
+  .itemCard-title {
+    top: 7px;
+  }
+}

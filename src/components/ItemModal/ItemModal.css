@@ -1,0 +1,50 @@
+.modal__content {
+  background-color: white;
+  position: relative;
+  padding: 0;
+  max-width: 498px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px;
+}
+
+.modal__image {
+  max-width: 498px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal__close_type_image {
+  background-image: url("../../assets/close-btn.svg");
+  /* background-color: transparent; */
+  color: #0000004d;
+  border: none;
+  top: 24px;
+  right: 24px;
+}
+.modal__footer {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: CabinetGrotesk, sans-serif;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.modal__delete-btn {
+  font-family: CabinetGrotesk, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  color: #ff4d00;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  cursor: pointer;
+}
