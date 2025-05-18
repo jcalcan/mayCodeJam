@@ -122,20 +122,54 @@
               <!-- Author here -->
             </footer>
           </section>
+
           <!-- You might have to restucture the bar graph -->
           <section class="graph">
             <div class="graph__header">
               <h2 class="graph__title">Calories</h2>
               <div class="graph__filter">Week</div>
             </div>
-            <div class="graph__mon"></div>
-            <div class="graph__tue"></div>
-            <div class="graph__wed"></div>
-            <div class="graph__thur"></div>
-            <div class="graph__fri"></div>
-            <div class="graph__sat"></div>
-            <div class="graph__sun"></div>
+            <div class="graph__container">
+              <div class="graph__y-axis">
+                <!--"0" pushed inside left padding/misaligned-->
+                <span>2000</span>
+                <span>1500</span>
+                <span>1000</span>
+                <span>500</span>
+                <span>0</span>
+              </div>
+              <div class="graph__bars">
+                <div
+                  class="graph__bar"
+                  data-label="Mon"
+                  data-value="1200"
+                ></div>
+                <div
+                  class="graph__bar"
+                  data-label="Tue"
+                  data-value="1000"
+                ></div>
+                <div class="graph__bar" data-label="Wed" data-value="850"></div>
+                <div
+                  class="graph__bar"
+                  data-label="Thu"
+                  data-value="1600"
+                ></div>
+                <div class="graph__bar" data-label="Fri" data-value="950"></div>
+                <div
+                  class="graph__bar"
+                  data-label="Sat"
+                  data-value="2000"
+                ></div>
+                <div
+                  class="graph__bar"
+                  data-label="Sun"
+                  data-value="1300"
+                ></div>
+              </div>
+            </div>
           </section>
+
           <section class="spinwheel__section">
             <h2 class="card__title">
               Feeling overwhelmed? Spin the wheel for your next workout!
