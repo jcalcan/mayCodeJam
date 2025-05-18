@@ -7,6 +7,7 @@
   margin-right: 0;
   margin-left: auto;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: visible;
 }
 
 .graph__header {
@@ -89,7 +90,10 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
-
+.graph__bar--overflow:hover {
+  background-color: #bc13fe;
+  opacity: 0.8;
+}
 .graph__bar::after {
   content: attr(data-label);
   position: absolute;
@@ -98,4 +102,8 @@
   transform: translateX(-50%);
   font-size: 16px;
   color: #333;
+}
+.graph__bar--overflow:hover::after {
+  content: attr(data-value);
+  bottom: 100%;
 }

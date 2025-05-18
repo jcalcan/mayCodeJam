@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const maxValue = 2000;
+
+  const addHabitBtn = document.getElementById("addHabitBtn");
+  const habitModal = document.getElementById("habitModal");
+  const cancelHabitBtn = document.getElementById("cancelHabitBtn");
+  const bars = document.querySelectorAll(".graph__bar");
+
   function showHabitModal() {
     habitModal.classList.remove("habit-modal-hidden");
   }
@@ -7,9 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
     habitModal.classList.add("habit-modal-hidden");
   }
 
-  const addHabitBtn = document.getElementById("addHabitBtn");
-  const habitModal = document.getElementById("habitModal");
-  const cancelHabitBtn = document.getElementById("cancelHabitBtn");
+  function updateGraphBars() {
+    bars.forEach((bar) => {
+      const value = parseInt(bar.getAttribute("data-value"), 10);
+      const height = (value / maxValue) * 100;
+      bar.style.height = `${height}%`;
+
+      if (value > maxValue) {
+        bar.classList.add("graph__bar--overflow");
+      }
+    });
+  }
+  updateGraphBars();
 
   addHabitBtn.addEventListener("click", showHabitModal);
   cancelHabitBtn.addEventListener("click", hideHabitModal);
