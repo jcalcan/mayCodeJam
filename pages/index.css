@@ -1,7 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../blocks/header.css);
-
 @import url(../blocks/mood.css);
 @import url(../blocks/dashboard.css);
 @import url(../blocks/graph.css);
@@ -11,3 +10,4 @@
 @import url(../blocks/tracker.css);
 @import url(../blocks/spinwheel.css);
 @import url(../blocks/sidebar.css);
+@import url(../blocks/modal.css);
