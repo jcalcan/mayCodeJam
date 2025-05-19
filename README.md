@@ -79,4 +79,5 @@ This will start the server.
 React_dashboard:
 
 ```npm run dev```
-You should see this on your terminal ./terminal-npm-run-dev.png
+You should see this on your terminal 
+![terminal-npm-run-dev](https://github.com/user-attachments/assets/18c4e76a-2077-4b18-b0e4-638997576de5)
