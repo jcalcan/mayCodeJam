@@ -78,6 +78,13 @@
   font-size: 20px;
   line-height: 24px;
   border: none;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.header__signup-btn:hover {
+  background-color: #d6d0fd;
+  cursor: pointer;
 }
 
 .header__login-btn {
@@ -88,6 +95,13 @@
   font-size: 20px;
   line-height: 24px;
   border: none;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.header__login-btn:hover {
+  background-color: #d6d0fd;
+  cursor: pointer;
 }
 
 .header__logout-btn {
