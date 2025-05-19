@@ -92,7 +92,7 @@ You should see this on your terminal
 
 ## 🔧 How to Run the Project Locally (WindowsOS)
 
-The process is almost the same on Windows, there are just a couple key things to do before heading to the terminal. After you install Node.js, MongoDB, and MongoDB Compass you need to add Node.js to environment variables. Search Environment Variables and open it, this what you should see: 
+The process is almost the same on Windows, there are just a couple key things to do before heading to the terminal. After you install Node.js, MongoDB, and MongoDB Compass you need to add Node.js to environment variables. Search "environment variables" and open it, this what you should see: 
 
 
 ![envi-var-ss](https://github.com/user-attachments/assets/9565a15a-4448-4d12-af95-867213ae0185)
