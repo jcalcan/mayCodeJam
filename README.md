@@ -14,7 +14,13 @@ If you are developing a production application, we recommend using TypeScript wi
 ## 🔧 How to Run the Project Locally (MacOS)
 Must have: Node.js (https://nodejs.org/en/download),
 MongoDB (https://www.mongodb.com/try/download/community), 
-MongoDB Compass (https://www.mongodb.com/try/download/atlascli)
+MongoDB Compass (https://www.mongodb.com/try/download/atlascli). 
+
+For app to be fully functional you must install compass with this connection name leave everything else as default: 
+
+![mongodb-compass-config](https://github.com/user-attachments/assets/2f6f9c44-4b75-4645-bcab-98d6fecd9a00)
+
+
 This project has two parts: front-end and back-end. You’ll need to clone each into its own folder and run them separately.
 
 ### ✅ Step 1: Create Folders
@@ -82,3 +88,22 @@ React_dashboard:
 You should see this on your terminal
 
 ![terminal-npm-run-dev](https://github.com/user-attachments/assets/18c4e76a-2077-4b18-b0e4-638997576de5)
+
+
+## 🔧 How to Run the Project Locally (WindowsOS)
+
+The process is almost the same on Windows, there are just a couple key things to do before heading to the terminal. After you install Node.js, MongoDB, and MongoDB Compass you need to add Node.js to environment variables. Search Environment Variables click it, this what you should see: 
+
+
+![envi-var-ss](https://github.com/user-attachments/assets/9565a15a-4448-4d12-af95-867213ae0185)
+
+Then double click path: 
+
+
+![envi-var-ss-path](https://github.com/user-attachments/assets/02eff421-736f-428c-bc09-070be348678d)
+
+
+Add Node.js path to the bottom of the list (usually found in C:\Program Files\node.js).
+
+
+![envi-var-ss-node](https://github.com/user-attachments/assets/dc5e7476-2cca-4749-943a-eb295fc554d7)
