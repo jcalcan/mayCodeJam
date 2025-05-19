@@ -1,5 +1,11 @@
 .page {
   background-color: #f3f3f3;
+  background-image: url("public/dashboard-cover-art.png");
+  min-height: 100vh;
+  background-size: auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page__content {

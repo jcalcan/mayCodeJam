@@ -88,7 +88,7 @@ function App() {
   }
 
   function handleAddClick() {
-    setActiveModal("add-garment");
+    setActiveModal("add-habit");
   }
 
   function closeActiveModal() {
@@ -257,10 +257,7 @@ function App() {
             <Route
               path="/"
               element={
-                <Main
-                  handleCardClick={handleCardClick}
-                  habitItems={habitItems}
-                />
+                <Main handleAddClick={handleAddClick} habitItems={habitItems} />
               }
             />
             <Route
@@ -289,7 +286,7 @@ function App() {
           />
 
           <AddItemModal
-            isOpen={activeModal === "add-garment"}
+            isOpen={activeModal === "add-habit"}
             onClose={closeActiveModal}
             onAddItemModalSubmit={handleAddItemModalSubmit}
           />

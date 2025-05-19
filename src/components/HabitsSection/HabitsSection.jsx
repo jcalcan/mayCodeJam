@@ -2,6 +2,24 @@ import ItemCard from "../ItemCard/ItemCard";
 import "./HabitsSection.css";
 
 function HabitsSection({ onCardClick, habitItems, handleAddClick }) {
+  const habits = [
+    {
+      icon: "public/running.png",
+      alt: "Running icon",
+      name: "Morning run"
+    },
+    {
+      icon: "public/water.png",
+      alt: "water icon",
+      name: "1.5L of water daily"
+    },
+    {
+      icon: "public/meditation.png",
+      alt: "meditation icon",
+      name: "Meditate - 30 minutes"
+    }
+  ];
+
   return (
     <div className="habits-section">
       <div className="habits-items-menu">
@@ -10,13 +28,22 @@ function HabitsSection({ onCardClick, habitItems, handleAddClick }) {
           + Add New
         </button>
       </div>
-      <ul className="habits-section__list">
-        {habitItems.map((item) => {
-          return (
-            <ItemCard key={item._id} item={item} onCardClick={onCardClick} />
-          );
-        })}
-      </ul>
+      <section className="tracker">
+        <h2 className="tracker__title">Habit Tracker</h2>
+        <ul className="tracker__list">
+          {habitItems.map((habit) => (
+            <ItemCard key={habit._id} item={habit} onCardClick={onCardClick} />
+          ))}
+        </ul>
+
+        <button
+          className="tracker__add-btn"
+          id="addHabitBtn"
+          onClick={handleAddClick}
+        >
+          Add Habit
+        </button>
+      </section>
     </div>
   );
 }

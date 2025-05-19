@@ -1,0 +1,129 @@
+.spinwheel__section {
+  position: fixed;
+  right: 10rem;
+  bottom: 18rem;
+  z-index: 200;
+  border-radius: 1rem;
+  max-width: 340px;
+}
+
+.spinwheel__container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.spinwheel__title {
+  position: absolute;
+  width: 400px;
+}
+
+.spinwheel__box {
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.spinwheel__box1 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+}
+
+.spinwheel__box1 span:nth-of-type(1) {
+  background-color: #7e6fd54b;
+  transform: translate(0%, 0%) rotate(180deg);
+}
+
+.spinwheel__box1 span:nth-of-type(2) {
+  background-color: #7e6fd580;
+  transform: translate(0%, 0%) rotate(270deg);
+}
+
+.spinwheel__box1 span:nth-of-type(3) {
+  background-color: #7e6fd5af;
+  transform: translate(0%, 0%) rotate(0deg);
+}
+.spinwheel__box1 span:nth-of-type(4) {
+  background-color: #7e6fd5de;
+  transform: translate(0%, 0%) rotate(90deg);
+}
+
+.spinwheel__pin {
+  background-color: rgb(248, 248, 248);
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  top: 170px;
+  left: 135px;
+  width: 30px;
+  height: 100px;
+}
+
+.spinwheel__description {
+  position: absolute;
+  margin: 0;
+}
+
+.spinwheel__description:nth-of-type(1) {
+  transform: translate(120px, 35px) rotate(0deg);
+}
+
+.spinwheel__description:nth-of-type(2) {
+  z-index: 1;
+  transform: translate(230px, 136px) rotate(90deg);
+}
+
+.spinwheel__description:nth-of-type(3) {
+  z-index: 1;
+  transform: translate(112px, 245px) rotate(180deg);
+}
+
+.spinwheel__description:nth-of-type(4) {
+  z-index: 1;
+  transform: translate(3px, 137px) rotate(270deg);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.spinwheel-modal.modal-visible {
+  display: flex;
+}
+
+.spinwheel-modal__content {
+  background: #fff;
+  /* padding: 2rem; */
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: auto;
+  position: relative;
+}
+
+.spinwheel-modal__close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
