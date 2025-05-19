@@ -1,5 +1,7 @@
 .habits-items-menu {
   display: flex;
+  position: relative;
+  top: -2rem;
   gap: 20px;
   font-family: CabinetGrotesk, sans-serif;
   font-weight: 700;
@@ -9,15 +11,28 @@
 }
 
 .habits-items-menu_btn {
+  border-radius: 20px;
   cursor: pointer;
   border: none;
   font-family: CabinetGrotesk, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
-  opacity: 60%;
+  opacity: 80%;
   color: #00000099;
 }
+
+.habits-items-menu_btn:hover {
+  transition: background-color 0.3s ease;
+  background-color: #7e6fd5;
+  color: #000;
+}
+
+.habits-section {
+  top: -15rem;
+  position: relative;
+}
+
 .habits-section__list {
   list-style-type: none;
   display: grid;
@@ -34,9 +49,11 @@
 }
 
 .tracker {
+  position: relative;
+  top: -3rem;
   display: flex;
   flex-direction: column;
-  background-color: #e8e8f5;
+  background-color: #f8f8fc;
   width: 300px;
   height: auto;
   min-height: 363px;
@@ -45,8 +62,12 @@
   margin: 30px 0;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  grid-row: 6/6;
+  transition: box-shadow 0.3s ease;
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); */
+}
+
+.tracker:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0);
 }
 
 .tracker__title {
@@ -62,7 +83,6 @@
   margin-top: 30px;
   font-size: 14px;
   border-radius: 8px;
-
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
@@ -139,7 +159,7 @@
 
 /* Move habits to habits.css */
 
-.habit-modal {
+/* .habit-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -250,4 +270,4 @@
     padding-bottom: 20px;
     margin: 0 auto;
   }
-}
+} */

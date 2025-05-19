@@ -18,6 +18,12 @@
   padding-left: 10px;
   margin-top: auto;
 }
+
+.header__logo:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
 .header__icon {
   padding: 5px 15px 0 0;
   height: 44px;
@@ -57,6 +63,11 @@
   line-height: 24px;
   border: none;
   background: none;
+}
+
+.header__add-habit-btn:hover {
+  transition: color 0.3s ease;
+  color: #7e6fd5;
 }
 
 .header__signup-btn {

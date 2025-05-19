@@ -1,5 +1,5 @@
 .page {
-  background-color: #f3f3f3;
+  background-color: #efecfe;
   background-image: url("public/dashboard-cover-art.png");
   min-height: 100vh;
   background-size: auto;
@@ -9,7 +9,7 @@
 }
 
 .page__content {
-  max-width: 1360px;
+  height: fit-content;
   max-width: 100%;
   padding: 0 40px 0 40px;
 }

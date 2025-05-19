@@ -3,13 +3,15 @@
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: 300px;
-  background-color: none;
   background-position: top right;
 }
 
 .dashboard__content {
-  display: grid;
   padding: 0 40px 0;
+}
+
+.dashboard__user__info {
+  height: 900px;
 }
 
 .dashboard__title {
@@ -23,7 +25,6 @@
 }
 .dashboard-cards__list {
   list-style-type: none;
-  display: grid;
   grid-gap: 20px 20px;
   grid-template-columns: repeat(auto-fit, 323px);
   grid-template-rows: auto;
