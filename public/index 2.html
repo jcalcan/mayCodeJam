@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Codify" />
+    <meta name="description" content="Wellness dashboard" />
+    <link rel="favicon-ico" href="./favicon.ico" />
+    <title>Wellife</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <!-- <section
+      class="card card--questionnaire section--hidden"
+      id="questionnaire-card"
+    >
+      <h2 class="card__title">Questionnaire</h2> -->
+    <!--Adjust the form and the questions-->
+    <!-- <form class="form" id="questionnaire-form">
+        <label class="form__label">
+          Age:
+          <input
+            type="number"
+            class="form__input"
+            name="age"
+            min="10"
+            max="100"
+            required
+          />
+        </label>
+        <label class="form__label">
+          Fitness Level:
+          <select class="form__input" name="fitness" required>
+            <option value="">Select</option>
+            <option value="novice">Novice</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="experienced">Experienced</option>
+          </select>
+        </label>
+        <label class="form__label">
+          Your main wellness goal:
+          <select class="form__input" name="goal" required>
+            <option value="">Select a goal</option>
+            <option value="reduce-stress">Reduce Stress</option>
+            <option value="improve-sleep">Improve Sleep</option>
+            <option value="boost-energy">Boost Energy</option>
+            <option value="mental-clarity">Enhance Mental Clarity</option>
+          </select>
+        </label>
+        <button type="submit" class="form__submit-btn">Submit</button>
+      </form>
+    </section> -->
+
+    <!--mood selection feature-->
+    <!-- <div class="mood" id="mood">
+      <div class="mood__content">
+        <p class="mood__title">How are you feeling today?</p>
+        <div class="mood__options">
+          <button class="mood__btn" data-mood="happy">&#128522;</button>
+          <button class="mood__btn" data-mood="neutral">&#128528;</button>
+          <button class="mood__btn" data-mood="sad">&#128577;</button>
+          <button class="mood__btn" data-mood="tired">&#128555;</button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="dashboard dashboard--hidden" id="dashboard">
+      <aside class="dashboard__sidebar">
+        <nav class="dashboard__nav">
+    <!--Add sidebar imgs & alt-->
+    <ul class="dashboard__nav-list">
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+            <li class="dashboard__nav-item">
+              <img src="" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </aside>
+    <div class="dashboard__main">
+      <header class="header">
+        <div class="header__logo">
+          <!--Add dashboard logo-->
+          <img src="./images/logo.svg" alt="Wellife logo" />
+        </div>
+        <div class="header__tools">
+          <!--Add search/notifications/settings icons-->
+          <button class="header__btn">
+            <img
+              class="header__icon"
+              src="./images/search-icon.svg"
+              alt="Search icon"
+            />
+          </button>
+          <button class="header__btn">
+            <img
+              class="header__icon"
+              src="./images/settings-icon.svg"
+              alt="Settings icon"
+            />
+          </button>
+          <!--check if you need btn/img-->
+          <img
+            class="header__icon"
+            src="./images/profile-icon.svg"
+            alt="Profile icon"
+          />
+        </div>
+      </header>
+      <main class="dashboard__content">
+        <section class="dashboard__user__info">
+          <p class="dashboard__title">Dashboard</p>
+          <h2 class="dashboard__greeting">Hi, Codify</h2>
+          <blockquote class="quote" id="quote-text">
+            <!-- Quote here -->
+          </blockquote>
+          <footer class="quote__author" id="quote-author">
+            <!-- Author here -->
+          </footer>
+        </section>
+        <!-- You might have to restucture the bar graph -->
+        <section class="graph">
+          <div class="graph__mon"></div>
+          <div class="graph__tue"></div>
+          <div class="graph__wed"></div>
+          <div class="graph__thur"></div>
+          <div class="graph__fri"></div>
+          <div class="graph__sat"></div>
+          <div class="graph__sun"></div>
+        </section>
+        <section class="card card--spinwheel">
+          <h2 class="card__title">Spin the Wheel</h2>
+          <p class="card__text">
+            Ready to receive your personalized wellness task?
+          </p>
+          <!--improve btn layout-->
+          <button class="card__btn">Spin Now</button>
+        </section>
+        <section class="habits">
+          <h2 class="habits__title">Habit Tracker</h2>
+          <ul class="habits__tracker">
+            <!--Add habits here-->
+            <li class="habits__tracker__item">
+              <img src="./images/run-icon.svg" alt="Running icon" class="habits__run__icon">
+              <caption class="habits__caption">Morning run</caption>
+             
+                <img src="./images/clock-icon.svg" alt="Clock icon" class="habits__clock__icon">
+            
+                
+                <img src="./images/timer-icon.svg" alt="Timer icon" class="habits__timer__icon">
+              
+            
+            <input type="checkbox" class="habits__checkbox">
+          </li>
+            <li class="habits__tracker__item">
+              <img src="./images/water-icon.svg" alt="Water icon" class="habits__water__icon">
+              <!-- Needs captions tags -->
+              1,5L of water daily
+                <img src="./images/clock-icon.svg" alt="Clock icon" class="habits__clock__icon">
+                <img src="./images/timer-icon.svg" alt="Timer icon" class="habits__timer__icon">
+            <input type="checkbox" class="habits__checkbox">
+          </li>  
+            <li class="habits__tracker__item">
+              <img src="./images/cooking-icon.svg" alt="Cooking icon" class="habits__run__icon">
+              <!-- Needs captions tags -->
+              Cooking mealpreps for 3 days
+                <img src="./images/clock-icon.svg" alt="Clock icon" class="habits__clock__icon">
+                <img src="./images/timer-icon.svg" alt="Timer icon" class="habits__timer__icon">
+            <input type="checkbox" class="habits__checkbox">
+          </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <!-- </div> -->
+    <script src="scripts/index.js"></script>
+    <footer></footer>
+    <div class="register" id="register-overlay">
+      <div class="register__modal">
+        <h2 class="register__title">New account</h2>
+        <p class="register__subtitle">
+          Already have an account? <a href="#">Sign in</a>
+        </p>
+        <form class="register__form">
+          <div class="register__row">
+            <label class="register__label" for="first-name">
+              First name
+              <input
+                class="register__input"
+                id="first-name"
+                type="text"
+                placeholder="First name"
+                required
+              />
+            </label>
+            <label class="register__label" for="last-name">
+              Last name
+              <input
+                class="register__input"
+                id="last-name"
+                type="text"
+                placeholder="Last name"
+                required
+              />
+            </label>
+          </div>
+          <label class="register__label register__email" for="email">
+            Email address
+            <input
+              class="register__input"
+              id="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label class="register__label register__password" for="password">
+            Password
+            <input
+              class="register__input"
+              id="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <p class="register__note">
+              min. 8 characters • includes special characters
+            </p>
+          </label>
+          <div class="register__footer">
+            <label class="register__checkbox">
+              <input type="checkbox" required />
+              I agree the <a href="#">Terms of Use</a> and
+              <a href="#">Privacy Policy</a>.
+            </label>
+            <button type="submit" class="register__btn">Create account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
