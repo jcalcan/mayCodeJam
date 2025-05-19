@@ -6,11 +6,7 @@
   padding: 20px;
   margin-right: 0;
   margin-left: auto;
-<<<<<<< HEAD
   grid-row: 2/3;
-=======
-  overflow: visible;
->>>>>>> af6e64a (Add JS to calculate and render graph bar heights with overflow detection)
 }
 
 .graph__header {
@@ -77,7 +73,6 @@
   width: 100%;
   padding: 0;
   flex-grow: 1;
-  
 }
 
 .graph__bar {
@@ -89,7 +84,6 @@
   background-color: #ffeeba;
   border-radius: 10px;
   position: relative;
-   
 }
 
 .graph__bar:hover {
@@ -109,4 +103,3 @@
   font-size: 16px;
   color: #373636;
 }
-
