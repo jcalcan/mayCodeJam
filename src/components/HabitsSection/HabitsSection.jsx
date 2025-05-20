@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import ItemCard from "../ItemCard/ItemCard";
+import AppContext from "../../contexts/AppContext";
 import "./HabitsSection.css";
 
 function HabitsSection({ onCardClick, habitItems, handleAddClick }) {
+  const { isLoggedIn, currentUser } = useContext(AppContext);
   const habits = [
     {
       icon: "public/running.png",
@@ -40,6 +43,7 @@ function HabitsSection({ onCardClick, habitItems, handleAddClick }) {
           className="tracker__add-btn"
           id="addHabitBtn"
           onClick={handleAddClick}
+          disabled={!isLoggedIn}
         >
           Add Habit
         </button>

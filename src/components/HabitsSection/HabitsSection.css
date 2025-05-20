@@ -85,6 +85,14 @@
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
+
+.tracker__add-btn:disabled {
+  background-color: #cccccc;
+  color: #888888;
+  cursor: not-allowed;
+  border-color: #bbbbbb;
+  opacity: 1;
+}
 .tracker__add-btn:hover {
   background-color: #6e5cc4;
   cursor: pointer;
