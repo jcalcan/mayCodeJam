@@ -11,7 +11,7 @@
 }
 
 .dashboard__user__info {
-  height: 900px;
+  max-height: 1000px;
 }
 
 .dashboard__title {
@@ -34,4 +34,14 @@
   margin: 0;
   padding: 0;
   justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .dashboard__main {
+    padding: 0;
+  }
+
+  .dashboard__content {
+    padding: 0;
+  }
 }
