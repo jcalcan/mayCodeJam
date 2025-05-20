@@ -92,6 +92,7 @@
 }
 
 .tracker__list {
+  max-height: 300px;
   flex: 1 1 auto;
   overflow-y: auto;
   margin-bottom: 0;
@@ -103,7 +104,7 @@
   gap: 16px;
 }
 
-.tracker__item {
+.itemCard-tracker__item {
   font-size: 18px;
   color: #333;
   padding-bottom: 8px;

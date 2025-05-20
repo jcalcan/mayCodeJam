@@ -8,13 +8,13 @@ function Profile({ onCardClick, habitItems, handleAddClick }) {
       <section className="profile__sidebar">
         <SideBar />
       </section>
-      <section className="profile__clothing-items">
+      <div className="profile__clothing-items">
         <HabitsSection
           onCardClick={onCardClick}
           habitItems={habitItems}
           handleAddClick={handleAddClick}
         />
-      </section>
+      </div>
     </div>
   );
 }

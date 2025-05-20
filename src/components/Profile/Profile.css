@@ -17,3 +17,7 @@
   box-sizing: border-box;
   width: 100%;
 }
+
+.profile__clothing-items .habits-section {
+  top: 3rem;
+}

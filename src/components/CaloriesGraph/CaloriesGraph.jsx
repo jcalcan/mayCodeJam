@@ -11,6 +11,8 @@ const graphData = [
 ];
 
 function CaloriesGraph() {
+  const maxValue = Math.max(...graphData.map((day) => day.value));
+
   return (
     <section className="graph">
       <div className="graph__header">
@@ -26,14 +28,20 @@ function CaloriesGraph() {
           <span>0</span>
         </div>
         <div className="graph__bars">
-          {graphData.map((day) => (
-            <div
-              key={day.label}
-              className="graph__bar"
-              data-label={day.label}
-              data-value={day.value}
-            ></div>
-          ))}
+          {graphData.map((day) => {
+            const height = (day.value / maxValue) * 100;
+            const isOverflow = day.value > maxValue;
+            return (
+              <div
+                key={day.label}
+                className={`graph__bar${
+                  isOverflow ? " graph__bar--overflow" : ""
+                }`}
+                style={{ height: `${height}%` }}
+                title={`${day.label}: ${day.value}`}
+              ></div>
+            );
+          })}
         </div>
       </div>
     </section>

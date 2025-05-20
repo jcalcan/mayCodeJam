@@ -101,3 +101,8 @@
   font-size: 16px;
   color: #333;
 }
+
+.graph__bar--overflow:hover {
+  background-color: #bc13fe;
+  opacity: 0.8;
+}
