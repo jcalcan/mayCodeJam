@@ -1,6 +1,6 @@
-import "./AddItemModal.css";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import "./AddItemModal.css";
 
 export default function AddItemModal({
   onClose,
@@ -43,7 +43,7 @@ export default function AddItemModal({
             onChange={handleHabitButton}
             checked={habitButton === "run"}
           />{" "}
-          Run
+          Morning run
         </label>
         <label
           htmlFor="workout"
@@ -58,7 +58,38 @@ export default function AddItemModal({
             onChange={handleHabitButton}
             checked={habitButton === "workout"}
           />
-          workout
+          Workout
+        </label>
+        <label
+          htmlFor="meditate"
+          className="modal__label modal__label_type_radio"
+        >
+          <input
+            id="meditate"
+            name="habit"
+            type="radio"
+            className="modal__radio-input"
+            value="meditate"
+            onChange={handleHabitButton}
+            checked={habitButton === "meditate"}
+          />
+          Meditate - 30 minutes
+        </label>
+
+        <label
+          htmlFor="drink-water"
+          className="modal__label modal__label_type_radio"
+        >
+          <input
+            id="drink-water"
+            name="habit"
+            type="radio"
+            className="modal__radio-input"
+            value="drink water"
+            onChange={handleHabitButton}
+            checked={habitButton === "drink water"}
+          />
+          1.5L of water daily
         </label>
       </fieldset>
     </ModalWithForm>

@@ -1,6 +1,6 @@
 .page {
   background-color: #efecfe;
-  background-image: url("public/dashboard-cover-art.png");
+  background-image: url("/dashboard-cover-art.png");
   min-height: 100vh;
   background-size: auto;
   background-position: top right;

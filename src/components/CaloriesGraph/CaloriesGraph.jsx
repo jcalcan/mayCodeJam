@@ -32,14 +32,17 @@ function CaloriesGraph() {
             const height = (day.value / maxValue) * 100;
             const isOverflow = day.value > maxValue;
             return (
-              <div
-                key={day.label}
-                className={`graph__bar${
-                  isOverflow ? " graph__bar--overflow" : ""
-                }`}
-                style={{ height: `${height}%` }}
-                title={`${day.label}: ${day.value}`}
-              ></div>
+              <div className="graph__bars">
+                <div
+                  key={day.label}
+                  className={`graph__bar${
+                    isOverflow ? " graph__bar--overflow" : ""
+                  }`}
+                  style={{ height: `${height}%` }}
+                  title={`${day.label}: ${day.value}`}
+                ></div>
+                <div className="graph__label">{day.label}</div>
+              </div>
             );
           })}
         </div>
