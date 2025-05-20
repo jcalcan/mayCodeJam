@@ -8,7 +8,6 @@ const {
   ITEM_NOT_FOUND_MESSAGE,
   ITEM_DELETED_MESSAGE,
   AUTHENTICATION_FAIL_MESSAGE,
-  INVALID_URL_MESSAGE,
   UnauthorizedError
 } = require("../utils/errors");
 

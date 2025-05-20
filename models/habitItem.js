@@ -9,7 +9,7 @@ const habitItems = new mongoose.Schema({
   habit: {
     type: String,
     required: true,
-    enum: ["run", "workout"]
+    enum: ["run", "workout", "drink water", "meditate"]
   },
   owner: {
     type: ObjectId,
